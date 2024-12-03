@@ -1,0 +1,106 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light grayish background */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for the entire app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Top Navigation Buttons */
+.side-bar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #1b5e20; /* Dark green */
+  padding: 20px 0;
+  border-bottom: 5px solid #81c784; /* Add a bottom accent color */
+}
+
+.side-bar a {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 5px;
+  background-color: #4caf50; /* Green button background */
+  transition: all 0.3s ease;
+}
+
+.side-bar a:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px; /* Larger padding for increased content space */
+  background-color: white;
+  width: 90%; /* Increase width */
+  max-width: 1200px; /* Limit max width for larger screens */
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  font-size: 18px; /* Slightly larger text size */
+}
+
+/* Styling for the main page header */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 32px; /* Larger font for headers */
+}
+
+p {
+  line-height: 1.8; /* Better readability */
+  margin-bottom: 20px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .side-bar {
+    flex-wrap: wrap; /* Wrap buttons if screen width is smaller */
+    padding: 10px 0;
+  }
+
+  .side-bar a {
+    margin: 10px 0; /* Add spacing for stacked buttons */
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .main-content {
+    width: 95%; /* Adjust content width for smaller screens */
+    padding: 30px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* Style for Not Found Page */
+.not-found {
+  text-align: center;
+  font-size: 24px;
+  color: #e53935; /* Bright red for error message */
+}
